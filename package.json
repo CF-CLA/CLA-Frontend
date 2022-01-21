@@ -1,0 +1,26 @@
+{
+  "name": "cla-frontend",
+  "version": "1.0.0",
+  "description": "Command Line App front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CF-CLA/CLA-Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CF-CLA/CLA-Frontend/issues"
+  },
+  "homepage": "https://github.com/CF-CLA/CLA-Frontend#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^14.2.0"
+  }
+}
