@@ -20,7 +20,6 @@
   "homepage": "https://github.com/CF-CLA/CLA-Frontend#readme",
   "dependencies": {
     "axios": "^0.25.0",
-    "bcrypt": "^5.0.1",
     "dotenv": "^14.2.0"
   }
 }

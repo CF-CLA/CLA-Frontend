@@ -1,7 +1,6 @@
 require('dotenv').config();
 const readline = require('readline');
 const rl = readline.createInterface(process.stdin, process.stdout);
-const bcrypt = require('bcrypt');
 const axios = require('axios');
 
 let answerData = {
@@ -27,7 +26,7 @@ async function signUpUser(username, password) {
   let requestConfig = {
     method: 'post',
     baseURL: process.env.BASE_URL,
-    url: '/createUser',
+    url: '/signup',
     auth: {
       username: username,
       password: password
@@ -43,7 +42,7 @@ rl.question("Do you have an account? (please enter 'yes' or 'no') ", function (c
     rl.question("What is your username? ", function (username) {
       answerData.username = username;
       rl.question("What is your password? ", async function (password) {
-        answerData.password = await bcrypt.hash(password, 10);
+        answerData.password = password;
         // Axios request receiving user data
         signInUser();
       });
@@ -53,7 +52,7 @@ rl.question("Do you have an account? (please enter 'yes' or 'no') ", function (c
     rl.question("What is your username? ", function (username) {
       answerData.username = username;
       rl.question("What is your password? ", async function (password) {
-        answerData.password = await bcrypt.hash(password, 10);
+        answerData.password = password;
         // Axios request making account
         signUpUser();
       });
